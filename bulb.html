@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color: black;
+        align-items: center;
+        justify-items: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+justify-content: center;
+align-items: center;
+    }
+    #div1{
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border-radius: 50%;
+    }
+</style>
+</head>
+<body>
+    <div id="div1"></div>
+    <br><br>
+    <DIV><button id="on" onclick="on()">Switch On</button>
+    <button id="off" onclick="off()">Switch Off</button></DIV>
+    
+    <script>
+function on(){
+  let  ele=document.getElementById("div1")
+    ele.style.backgroundColor="yellow"
+    ele.style.boxShadow="0 0 50px yellow"
+}
+function off(){
+  let  ele=document.getElementById("div1")
+    ele.style.backgroundColor="white"
+    ele.style.boxShadow=""
+}
+
+    </script>
+</body>
+</html>

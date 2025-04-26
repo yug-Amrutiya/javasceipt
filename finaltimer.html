@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #box{
+            text color:white;
+            width: 300px;
+            height: 180px;
+            background-color: lightblue;
+            border-radius: 30px;
+            align-content: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">Your Timer</h1>
+    <div id="box">
+    <input type="text" id="inp">
+    <h1 id="h">Enter seconds</h1>
+    <button id="button" onclick="run()">Start</button>
+</div>
+    <script>
+        function run(){
+            let x=document.getElementById("inp").value
+        document.getElementById("h").innerHTML="Timer starts Now..."
+        function abc(){
+            if(x>0){
+        document.getElementById("h").innerHTML=x
+        let ele=document.getElementById("h")
+        ele.style.backgroundColor="darkblue"
+        ele.style.color="white"
+        ele.style.textAlign="center"
+        ele.style.width="60px"
+        ele.style.height="60px"
+        ele.style.marginLeft="115px"
+        ele.style.borderRadius="50%"
+        x--}
+        else{
+            clearInterval(interval)
+            document.getElementById("h").innerHTML="Time Over!"
+            let ele=document.getElementById("h")
+            ele.style.backgroundColor=""
+            ele.style.color=""
+            ele.style.width=""
+        ele.style.height=""
+        ele.style.marginLeft=""
+        }
+        }
+        document.getElementById("inp").value=""
+let interval=setInterval(abc,1000)
+    }
+    </script>
+</body>
+</html>
