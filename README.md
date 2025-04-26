@@ -1,1 +1,1 @@
-# javasceipt
+java-script projects.
